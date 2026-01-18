@@ -1,0 +1,94 @@
+/* ================= Skylinks Library (tokens + components + utilities) ================ */
+:root {
+  --color-primary:#eeb02b; --color-primary-600:#eeb02b; --color-primary-700:#ca9625; --color-accent:#ffca31;
+  --color-neutral-900:#1c191a; --color-neutral-700:#262b2f; --color-neutral-500:#6b7280; --color-neutral-200:#e5e7eb; --color-neutral-50:#ffffff;
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --font-heading: var(--font-sans);
+  --text-xs:.75rem; --text-sm:.875rem; --text-base:1rem; --text-lg:1.125rem; --text-xl:1.25rem; --text-2xl:1.5rem; --text-3xl:1.875rem; --text-4xl:2.375rem;
+  --space-1:.25rem; --space-2:.5rem; --space-3:.75rem; --space-4:1rem; --space-6:1.5rem; --space-8:2rem; --space-12:3rem;
+  --radius-sm:4px; --radius-md:8px; --radius-lg:14px; --shadow-sm:0 1px 2px rgba(0,0,0,.06); --shadow-md:0 4px 12px rgba(0,0,0,.12);
+  --container-max:1200px; --container-pad:1rem;
+}
+
+/* Base */
+.skylinks-scope,.skylinks-reset{font-family:var(--font-sans);color:var(--color-neutral-700);line-height:1.6;}
+.skylinks-scope h1,.skylinks-scope h2,.skylinks-scope h3,.skylinks-reset h1,.skylinks-reset h2,.skylinks-reset h3{font-family:var(--font-heading);color:var(--color-neutral-900);line-height:1.2;margin:var(--space-6) 0 var(--space-4);}
+.skylinks-scope h1{font-size:clamp(2rem,3vw,var(--text-4xl));}
+.skylinks-scope h2{font-size:clamp(1.5rem,2.4vw,var(--text-3xl));}
+.skylinks-scope h3{font-size:clamp(1.25rem,1.8vw,var(--text-2xl));}
+.skylinks-scope p{margin:0 0 var(--space-4);} .skylinks-scope a{color:var(--color-primary);text-decoration:none;} .skylinks-scope a:hover{color:var(--color-primary-700);text-decoration:underline;}
+
+/* Layout */
+.skylinks-container{max-width:var(--container-max);margin:0 auto;padding:0 var(--container-pad);} 
+.skylinks-grid{display:grid;gap:var(--space-6);} 
+
+/* Components */
+.skylinks-btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:.75rem 1.25rem;font-weight:600;border-radius:var(--radius-md);border:1px solid transparent;transition:.15s ease-in-out;box-shadow:var(--shadow-sm);} 
+.skylinks-btn-primary{background:var(--color-primary);color:#fff;} .skylinks-btn-primary:hover{background:var(--color-primary-700);} 
+.skylinks-btn-outline{background:transparent;color:var(--color-primary);border-color:var(--color-primary);} .skylinks-btn-outline:hover{background:rgba(0,0,0,.04);} 
+.skylinks-btn-muted{background:var(--color-neutral-200);color:var(--color-neutral-900);} .skylinks-btn-block{display:flex;width:100%;}
+
+.skylinks-card{background:#fff;border:1px solid var(--color-neutral-200);border-radius:var(--radius-lg);padding:var(--space-6);box-shadow:var(--shadow-sm);} 
+.skylinks-card > h3{margin-top:0;} .skylinks-card-muted{background:var(--color-neutral-50);} 
+
+.skylinks-badge{display:inline-block;padding:.25rem .5rem;font-size:var(--text-sm);border-radius:999px;background:var(--color-neutral-200);color:var(--color-neutral-900);} 
+.skylinks-badge-accent{background:var(--color-accent);color:#111;}
+
+.skylinks-nav{display:flex;gap:var(--space-4);align-items:center;} .skylinks-nav a{font-weight:600;padding:.5rem .75rem;border-radius:var(--radius-sm);} .skylinks-nav a:hover{background:rgba(0,0,0,.04);} 
+
+.skylinks-input,.skylinks-scope input[type="text"],.skylinks-scope input[type="email"],.skylinks-scope select,.skylinks-scope textarea{width:100%;padding:.625rem .75rem;border:1px solid var(--color-neutral-200);border-radius:var(--radius-sm);background:#fff;color:var(--color-neutral-900);} 
+.skylinks-input:focus,.skylinks-scope select:focus,.skylinks-scope textarea:focus{outline:2px solid var(--color-primary);outline-offset:2px;} 
+.skylinks-label{display:block;font-weight:600;margin-bottom:.25rem;} .skylinks-help{color:var(--color-neutral-500);font-size:var(--text-sm);} 
+
+.skylinks-table{width:100%;border-collapse:collapse;} .skylinks-table th,.skylinks-table td{padding:.75rem 1rem;border-bottom:1px solid var(--color-neutral-200);} .skylinks-table thead th{text-align:left;color:var(--color-neutral-900);font-weight:700;} 
+
+.skylinks-alert{padding:.75rem 1rem;border-radius:var(--radius-md);border:1px solid transparent;} 
+.skylinks-alert-success{background:#ecfdf5;color:#065f46;border-color:#a7f3d0;} .skylinks-alert-warning{background:#fffbeb;color:#92400e;border-color:#fde68a;} .skylinks-alert-danger{background:#fef2f2;color:#991b1b;border-color:#fecaca;}
+
+/* Patterns */
+.skylinks-hero{padding:clamp(3rem,6vw,6rem) 0;} .skylinks-hero .skylinks-actions{display:flex;gap:var(--space-4);flex-wrap:wrap;}
+.skylinks-hero-card{border:1px solid var(--color-neutral-200);border-radius:var(--radius-lg);background:var(--color-neutral-50);padding:var(--space-6);box-shadow:var(--shadow-sm);} 
+
+/* Utilities */
+.skylinks-text-center{text-align:center;} .skylinks-text-sm{font-size:var(--text-sm);} .skylinks-text-muted{color:var(--color-neutral-500);} 
+.skylinks-mt-0{margin-top:0;} .skylinks-mt-4{margin-top:var(--space-4);} .skylinks-mt-8{margin-top:var(--space-8);} 
+.skylinks-mb-0{margin-bottom:0;} .skylinks-mb-4{margin-bottom:var(--space-4);} .skylinks-mb-8{margin-bottom:var(--space-8);} 
+.skylinks-p-4{padding:var(--space-4);} .skylinks-p-6{padding:var(--space-6);} .skylinks-hide{display:none!important;} 
+.skylinks-grid-gap-sm{gap:14px;} .skylinks-grid-gap-md{gap:var(--space-6);} .skylinks-note{border-style:dashed;}
+/* Responsive grid helpers */
+.skylinks-grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr));}
+@media (min-width:768px){.skylinks-grid-md-2{grid-template-columns:repeat(2,minmax(0,1fr));}.skylinks-grid-md-3{grid-template-columns:repeat(3,minmax(0,1fr));}}
+@media (min-width:1024px){.skylinks-grid-lg-2{grid-template-columns:repeat(2,minmax(0,1fr));}.skylinks-grid-lg-3{grid-template-columns:repeat(3,minmax(0,1fr));}}
+/* Flex helpers */
+.skylinks-flex{display:flex;} .skylinks-flex-wrap{flex-wrap:wrap;} .skylinks-gap-4{gap:var(--space-4);} .skylinks-basis-360{flex:1 1 360px;}
+/* ================= /Skylinks Library ================= */
+
+/* Skylinks registration form extras */
+.skylinks-form{display:grid;gap:var(--space-6);}
+.skylinks-required{color:var(--color-primary);font-weight:600;margin-left:4px;}
+.skylinks-error{color:#991b1b;font-size:var(--text-sm);min-height:1.1em;}
+.skylinks-input[aria-invalid="true"],.skylinks-scope select[aria-invalid="true"]{border-color:#fecaca;}
+.skylinks-input[readonly]{background:#f9fafb;}
+.skylinks-spinner{width:16px;height:16px;border-radius:50%;border:2px solid rgba(255,255,255,.45);border-top-color:#fff;opacity:0;animation:skylinks-spin .8s linear infinite;}
+.skylinks-button[data-loading="true"] .skylinks-spinner{opacity:1;}
+.skylinks-button[data-loading="true"] .skylinks-button-text{opacity:.7;}
+@keyframes skylinks-spin{to{transform:rotate(360deg);}}
+
+
+
+
+
+
+
+
+
+
+
+
+footer section#media_image-3 {
+    max-width: 200px;
+}
+
+#menu-item-49:nth-child(2) {
+	display: none;
+}
